@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Form = () => {
   const initialName = 'Vasya';
   const [name, setName] = useState(initialName);
 
   const onChangeName = (e) => setName(e.target.value);
+
+  useEffect(() => {
+    document.title = name;
+  });
 
   return (
     <form className="form">

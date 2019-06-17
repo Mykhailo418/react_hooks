@@ -1,6 +1,7 @@
 import React, { Component, createContext } from 'react';
 import Form from './Form';
 import User from './User';
+import Counter from './Counter';
 
 export const UserContext = createContext();
 
@@ -21,6 +22,7 @@ class App extends Component{
           <UserContext.Provider value={this.state.userInfo}>
           	<User />
           </UserContext.Provider>
+          <Counter />
         </div>
       );
     }

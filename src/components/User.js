@@ -6,10 +6,10 @@ const User = () => {
 	const userInfo = useContext(UserContext);
 
     return (
-      <div className="container">
+      <section>
         <h2>User Info</h2>
         {outputUserInfo()}
-      </div>
+      </section>
     );
 
     function outputUserInfo(){

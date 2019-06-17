@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useDebugValue } from 'react';
 import { useTitleInput } from '../customHooks/useTitleInput';
 
 const Form = () => {
   const initialName = 'Vasya';
   //const [name, setName] = useState(initialName);
   const [name, setName] = useTitleInput(initialName);
+  useDebugValue(name);
+
   const ref = useRef();
 
   const onChangeName = (e) => setName(e.target.value);

@@ -3,6 +3,7 @@ import Form from './Form';
 import User from './User';
 import Counter from './Counter';
 import ReverseWord from './ReverseWord';
+import Repositories from './Repositories';
 
 export const UserContext = createContext();
 
@@ -25,6 +26,7 @@ class App extends Component{
           </UserContext.Provider>
           <Counter />
           <ReverseWord />
+          <Repositories />
         </div>
       );
     }

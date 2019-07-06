@@ -13,7 +13,12 @@ const Repositories = () => {
 
     useEffect(() => {
         loadRepos();
-    }, [sinceRepoId])
+        return () => {
+            // cleanup
+            console.log('useEffect - clean up');
+            setRepos([]);
+        }
+    }, [sinceRepoId]);
 
     return (
       <section>

@@ -4,6 +4,7 @@ import User from './User';
 import Counter from './Counter';
 import ReverseWord from './ReverseWord';
 import Repositories from './Repositories';
+import Box from './Box';
 
 export const UserContext = createContext();
 
@@ -27,6 +28,7 @@ class App extends Component{
           <Counter />
           <ReverseWord />
           <Repositories />
+          <Box />
         </div>
       );
     }

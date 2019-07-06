@@ -14,7 +14,7 @@ const boxStyle = {
 const Box = () => {
 	const [isClickOutside, setClickState] = useState(null);
     const ref = useRef();
-    useOnClickOutside(ref, setClickState)
+    useOnClickOutside(ref, setClickState);
 
     return (
       <section>

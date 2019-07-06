@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import RepoList from './RepoList';
 import PropTypes from 'prop-types';
 
 const Repositories = () => {
@@ -35,15 +36,7 @@ const Repositories = () => {
 
     function outputRepos(){
         if(!repos || !repos.length) return 'Loading...';
-        const list = repos.map((repo) => {
-           return (
-                <li key={repo.id}>
-                    <strong>{repo.name}</strong>
-                    <p>{repo.description}</p>
-                </li>
-            )
-        });
-        return <ul style={{maxHeight: '200px', overflowY: 'scroll'}}>{list}</ul>
+        return <RepoList repos={repos} />
     }
     
 }
